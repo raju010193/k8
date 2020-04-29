@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: hello-deploy
+    labels:
+      app: hello-world
+spec:
+    replicas: 10
+    minReadySeconds: 10
+    strategy:
+      type: RollingUpdate
+      rollingUpdate:
+         maxUnavailable: 1
+         maxSurge: 1
+    selector:
+      matchLabels:
+        app: hello-world
+    template:
+        metadata:
+            labels: 
+              app: hello-world
+        spec:
+          containers: 
+          - name: hello-pode
+            image: nginx
+            ports:
+            - containerPort: 500
+            volumeMounts:
+            - name: nginx-conf
+              mountPath: /etc/nginx/conf.d
+            - name: static-files
+              mountPath: /usr/share/nginx/html
+          volumes:
+          - name: static-files
+            configMap:
+              name: static-files
+          - name: nginx-conf
+            configMap:
+              name: nginx-conf

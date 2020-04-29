@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: deploy-svc
+    labels:
+        app: hello-world
+spec:
+    type: NodePort
+    ports:
+    - protocol: TCP
+      port: 500
+      nodePort: 30002
+    externalIPs:
+    - 192.168.100.9
+    selector:
+        app: hello-world
+
