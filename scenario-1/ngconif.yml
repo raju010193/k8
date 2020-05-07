@@ -6,7 +6,7 @@ metadata:
 data:
   default.conf: |
     server {
-      listen                  500;
+      listen                  600;
       server_name             _;
       index index.html index.htm index.nginx-debian.html;
       root                    /usr/share/nginx/html;

@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: jenkins-deploy
+    labels:
+      app: jenkins-app
+spec:
+    replicas: 2
+    selector:
+      matchLabels:
+        app: jenkins-app
+    template:
+        metadata:
+            labels: 
+              app: jenkins-app
+        spec:
+          terminationGracePeriodSeconds: 10
+          containers: 
+          - name: jenkins-container
+            image: raju140/jenkins
+            ports:
+            - containerPort: 8080
+            - containerPort: 30004
+            volumeMounts:
+            - name: local-volume
+              mountPath: "/var/jenkins_home"
+          volumes:
+          - name: local-volume
+            persistentVolumeClaim:
+                claimName: local-volume-pvc

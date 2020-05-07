@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: jenkins-service
+    labels:
+        app: jenkins-deploy
+spec:
+    type: NodePort
+    ports:
+    - protocol: TCP
+      name: jenkins-default
+      port: 8080
+      nodePort: 30005
+    - port: 50000
+      name: jenkins-forward
+      nodePort: 30004
+      protocol: TCP
+    externalIPs:
+    - 192.168.100.9
+    selector:
+        app: jenkins-deploy
+

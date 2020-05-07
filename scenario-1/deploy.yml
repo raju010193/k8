@@ -5,7 +5,7 @@ metadata:
     labels:
       app: hello-world
 spec:
-    replicas: 10
+    replicas: 3
     minReadySeconds: 10
     strategy:
       type: RollingUpdate
@@ -24,7 +24,7 @@ spec:
           - name: hello-pode
             image: nginx
             ports:
-            - containerPort: 500
+            - containerPort: 600
             volumeMounts:
             - name: nginx-conf
               mountPath: /etc/nginx/conf.d
