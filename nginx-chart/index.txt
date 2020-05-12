@@ -1,0 +1,5 @@
+<html><head><title>pramati technologies pvt ltd.</title></head>
+       <body><h1>Welcome to Pramati Technologies Pvt Ltd.</h1>
+       <p>
+        Hyderabad.</p>
+       </body></html>

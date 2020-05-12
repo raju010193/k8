@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{.Release.Name}}-static-files
+data:
+  index.html: | 
+    {{ .Files.Get "index.txt" | indent 2}}
+ 
