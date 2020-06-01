@@ -1,0 +1,65 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyArgumentListInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyBroadExceptionInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="3">
+            <item index="0" class="java.lang.String" itemvalue="s3transfer" />
+            <item index="1" class="java.lang.String" itemvalue="botocore" />
+            <item index="2" class="java.lang.String" itemvalue="python-dateutil" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E501" />
+          <option value="W191" />
+          <option value="E101" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N802" />
+          <option value="N806" />
+        </list>
+      </option>
+      <option name="ignoredBaseClasses">
+        <list>
+          <option value="unittest.TestCase" />
+          <option value="unittest.case.TestCase" />
+          <option value="articles.serializer.ArticleDataSerializer" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="articles.models.Audit.objects" />
+          <option value="users.models.WriteUser.DoesNotExist" />
+          <option value="articles.models.Subcategory.objects" />
+          <option value="django.db.models.fields.related.ForeignKey.title" />
+          <option value="django.db.models.fields.related.OneToOneField.title" />
+          <option value="django.db.models.fields.related.ForeignKey.username" />
+          <option value="articles.models.ArticleViews.articleViews" />
+          <option value="articles.models.RecentlyViewed.articleViews" />
+          <option value="articles.models.RecentPopularArticles.objects" />
+          <option value="articles.models.Sections.objects" />
+          <option value="users.models.UserLevels.objects" />
+          <option value="users.models.Levels.objects" />
+          <option value="users.models.SocialProfileLinks.user" />
+          <option value="users.models.SocialProfileLinks.socialName" />
+          <option value="django.db.models.fields.related.OneToOneField.username" />
+          <option value="django.db.models.fields.related.ForeignKey.levels" />
+          <option value="articles.models.SubscribeUserTags.objects" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

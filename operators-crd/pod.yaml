@@ -1,0 +1,12 @@
+apiVersion: "example.raju-test.de/v1alpha1"
+
+kind: Project
+metadata:
+  name: hello-pod
+spec:
+  replicas: 1
+  containers:
+    - name: hello-pod
+      image: nginx
+      ports:
+      - containerPort: 500
