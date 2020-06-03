@@ -1,0 +1,7 @@
+apiVersion: example.operator-test.de/v1alpha1
+kind: SampleOperator
+metadata:
+  name: example-sampleoperator
+spec:
+  # Add fields here
+  size: 3

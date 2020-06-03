@@ -1,0 +1,8 @@
+apiVersion: example.operator-test.de/v1alpha1
+kind: SampleOperator
+metadata:
+  name: example
+spec:
+  replicas: 3
+  host: example.operator-test.de
+  recipient: World

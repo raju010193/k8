@@ -1,0 +1,25 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: "CustomResourceDefinition"
+metadata:
+  name: "sampleoperators.example.operator-test.de"
+spec:
+  group: "example.operator-test.de"
+  version: "v1alpha1"
+  scope: "Namespaced"
+  names:
+    plural: "sampleoperators"
+    singular: "sampleoperator"
+    kind: "SampleOperator"
+  validation:
+    openAPIV3Schema:
+      properties:
+        spec:
+          type: object
+          properties:
+            replicas:
+              type: "integer"
+              minimum: 1
+            host:
+              type: string
+            recipient:
+              type: string
